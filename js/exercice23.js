@@ -40,7 +40,7 @@ frederique.prenom = "frederique";
 // qui pointe vers la variable affPrenom
 frederique.affichePrenom = affPrenom;
 
-var felix = { "prenom": "felix"};
+var felix = { "prenom": "felix", "age": 15};
 felix.affichePrenom = affPrenom;
 felix.age = 32;
 
