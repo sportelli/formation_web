@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+		<style>
+			#mondiv 
+			{ 
+				background-color: green;
+				width: 300px;
+			}
+			
+			#mondiv:hover 
+			{
+				transition: background-color 2s linear;
+				background-color: red;
+			}
+			
+			#mondiv2
+			{ 
+				background-color: red;
+				width: 100px;
+				border-radius: 20px;
+			}
+			
+			#mondiv2:hover 
+			{
+				transition: width 2s linear, background-color 2s linear;
+				width: 500px;
+				background-color: green;
+			}
+			
+			@keyframes change {
+				50% {
+					background-color: orange;
+				}
+				
+				100% {
+					background-color: green;
+					width: 500px;
+				}
+			}
+			
+			#mondiv3 {
+				margin-top: 50px;
+				background-color: red;
+				animation: change 5s;
+				width: 100px;
+				border-radius: 20px;
+			}
+			
+			#mondiv3:hover {
+				animation: change 2s;
+				animation-play-state: runnning;
+			}
+			
+			#mondiv3:not(hover) {
+				animation-play-state: paused;
+			}
+			
+			img {
+				width: 200px;
+				border-radius: 20px;
+			}
+			
+			img:hover {
+				transition: transform 20s linear;
+				transform:rotate(3600deg);
+			}
+		</style>
+	</head>
+	
+	<!-- Commentaire HTML -->
+	<body>
+		<h1>CSS3 </h1>
+		
+		<div id="mondiv">
+			&nbsp;
+		</div>
+		<br /><br />
+		<div id="mondiv2">
+			&nbsp;
+		</div>
+		
+		<div id="mondiv3">
+			&nbsp;
+		</div>
+		
+		<br /><br />
+		<img src="images/chat.jpg" alt="image de chat"/>
+		
+	</body>
+
+</html>

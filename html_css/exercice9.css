@@ -1,0 +1,25 @@
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.divgris
+{
+	background-color: gray;
+}
+
+.divbleu
+{
+	background-color: blue;
+	height: 100px;
+}
+
+.divrouge
+{
+	background-color: red;
+}
+
+.droite {
+	float: right;
+}

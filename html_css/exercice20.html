@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+		<style>
+			#gauche 
+			{ 
+				background-color: green;
+				width: 300px;
+			}
+			#droite 
+			{
+				background-color: red;
+				width: 300px;
+			}
+			
+			@media screen and (max-width: 640px) 
+			{ 
+				#gauche{
+					background-color: blue;
+					width: 100px;
+				}
+				#droite {
+					display: block;
+					width: 100px;
+				}
+			}
+
+			@media screen and (max-width: 400px) 
+			{ 
+				#gauche{
+					background-color: blue;
+					width: 100px;
+				}
+
+				#droite {
+					display: none;
+				}
+			}
+			
+		</style>
+	</head>
+	
+	<!-- Commentaire HTML -->
+	<body>
+		<h1>CSS3 Media Queries</h1>
+		
+		<div id="global">
+			<div id="gauche">&nbsp;</div>
+			<div id="droite">&nbsp;</div>
+		</div>
+	</body>
+
+</html>

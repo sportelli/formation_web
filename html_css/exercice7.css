@@ -1,0 +1,44 @@
+/* Commentaire CSS */
+
+#premiersoustitre {
+	color: blue;
+}
+
+.dernierp {
+	font-size: 8px;
+}
+
+.orange
+{ 
+	color: orange; 
+}
+
+/* propriete du lien */
+a {
+	color:#046D8B;
+}
+
+/* propriete du lien souris dessus */
+a:hover {
+	color: white;
+	background-color: #046D8B;
+}
+
+/* propriete du lien deja visite*/
+a:visited{
+	color: red;
+	font-weight:bold;
+}
+
+/* propriete du lien au clic */
+a:active {
+	font-weight: bold;
+}
+
+h2, p {
+	border: 1px dotted black;
+}
+
+a, em {
+	border: 2px solid red;
+}

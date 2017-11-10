@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+		<style>
+			table { margin-left: 100px; }
+			
+			/* solution 1 */
+			#derniereligne { font-weight: bold; }
+			.impair { color: blue; }
+			.pair { color: red; }
+			
+			/* solution 2 */
+			#tableauCSS3 tr:last-child {
+				font-weight:bold;
+			}
+			#tableauCSS3 tr:first-child {
+				font-weight:bold;
+			}
+			#tableauCSS3 tr:nth-child(2n) { /* (even) */
+				color: red;
+			}
+			#tableauCSS3 tr:nth-child(2n+1) { /* (odd) */
+				color: blue;
+			}
+			
+		</style>
+	</head>
+	
+	<!-- Commentaire HTML -->
+	<body>
+		<h1>CSS3</h1>
+		
+		<table>
+		<tr class="impair">
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr class="pair">
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr class="impair">
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr class="impair">
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr class="impair">
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>		
+		<tr class="impair">
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr id="derniereligne"  class="impair">
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		</table>
+		<hr />
+		
+		<table id="tableauCSS3">
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>		
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+		</tr>
+		</table>
+		
+	</body>
+
+</html>

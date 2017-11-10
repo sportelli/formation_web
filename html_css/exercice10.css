@@ -1,0 +1,19 @@
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+#cookies 
+{
+	position: absolute ;
+	background-color: yellow;
+	top: 0px;
+	left: 0px;
+}
+
+#content 
+{
+		height: 5000px;
+		background-color: blue;
+}

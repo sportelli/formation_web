@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+		<style>
+
+		</style>
+	</head>
+	
+	<!-- Commentaire HTML -->
+	<body>
+		<h1>formulaire</h1>
+		<form method="POST" action="utilisateur.php">
+			<fieldset>
+			<legend>Nouveau compte</legend>
+			<!-- Saisie texte -->
+			<label for="nom">Nom</label>
+			<input type="text" name="nom" placeholder="Votre nom..." autocomplete="off" autofocus required/>
+			<br />
+			
+			<!-- Saisie radio -->
+			<label for="sexe">Sexe</label>
+			<input type="radio" name="sexe" value="homme" checked>Homme</input>
+			<input type="radio" name="sexe" value="femme">Femme</input>
+			<input type="radio" name="sexe" value="autre">Autre</input>
+
+			<br />
+			<!-- Saisie checkbox -->
+			<label for="rememberMe">Se souvenir de moi</label>
+			<input type="checkbox" name="rememberMe"/>
+			
+			<!-- Saisie liste déroulante -->
+			<br/>
+			<label for="departement">Departement</label>
+			<select name="departement">
+				<option>22</option>
+				<option>56</option>
+				<option>35</option>
+			</select>
+			
+			<br/>
+			<label for="departementBis">Departement</label>
+			<select name="departementBis[]" 
+						size="3" multiple="true" 
+						style="width:100px;">
+				<option>22</option>
+				<option>56</option>
+				<option>35</option>
+				<option>29</option>
+			</select>
+			
+			<br />
+			<label for="tel">Telephone</label>
+			<input type="tel" name="tel"/>
+
+			<br />
+			<label for="mail">Email</label>
+			<input type="email" name="email"/>
+
+			<br />
+			<label for="url">URL</label>
+			<input type="url" name="url"/>
+
+			<br />
+			<label for="enfants">Nb enfants</label>
+			<input type="range" 
+				name="enfants" 
+				min="0" max="10" value="4"
+				step="2"
+				/>
+			
+			<br />
+			<label for="couleur">Couleur</label>
+			<input type="color" 
+				name="couleur" 
+				/>
+			
+			<br />
+			<label for="date">Date</label>
+			<input type="date" 
+				name="date" 
+				/>
+
+			<br />
+			<label for="datetime">Date / heure</label>
+			<input type="datetime-local" 
+				name="datetime" 
+				/>
+
+			<br />
+			<label for="week">Semaine</label>
+			<input type="week" 
+				name="week" 
+				/>
+
+			<br />
+			<label for="month">Mois</label>
+			<input type="month" 
+				name="month" 
+				/>
+
+			<br />
+			<datalist id="listDep">
+				<option value="22" label="Cotes d'armor"/>
+				<option value="35" label="Ille-et-Vilaine "/>
+				<option value="29" label="Finistere"/>
+			</datalist>
+			<input type="text" name="dep" list="listDep" />
+			
+			<br />
+			FR tiret: <input name="telUS" type="text" pattern="([0-9]{2}-){4}([0-9]{2})" required/>
+			FR point: <input name="telUS" type="text" pattern="([0-9]{2}\.){4}([0-9]{2})" required/>
+			FR rien: <input name="telUS" type="text" pattern="([0-9]{2}){4}([0-9]{2})" required/>
+			<br />
+			<input type="submit" value="valider"/>
+			</fieldset>
+		</form>
+	</body>
+
+</html>

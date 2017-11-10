@@ -1,0 +1,35 @@
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.fondbleu
+{
+	background-color: blue;
+	height: 100px;
+}
+
+.fondrouge 
+{
+	background-color: red;
+}
+
+.fondorange 
+{
+	background-color: orange;
+}
+
+.fondrose 
+{
+	background-color: pink;
+}
+
+.fondvert 
+{
+	background-color: green;
+/*	border-style: solid dotted dashed double;*/
+	border-style: groove;
+	border-width: 3px;	
+	border-color: cyan;
+}
