@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+			<meta charset="utf-8" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			.invisible { 
+				display: none;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>JQuery </h1>
+
+		<button id="monBouton">A cliquer</button>
+		
+		<p id="p1">Utilisateurs: </p>
+
+		<table id="tabUsers">
+			<thead>
+				<tr><th>id</th><th>Nom</th><th>Prenom</th></tr>
+			</thead>
+			<tbody id="tbody">
+				
+			</tbody>
+		</table>
+		
+		<script type="text/javascript">
+			$.ajax({ 
+				url : 'serverAjaxGet.php', 
+				type : 'POST', 
+				data : { id: 3 } })
+			.done(function(data) {
+					var utilisateurs = data;
+					var str= "";
+					for (var i = 0; i < utilisateurs.length ; i++)
+					{
+						console.log(utilisateurs[i]);
+						str += "<tr><td>" + utilisateurs[i].id + "</td><td>" + utilisateurs[i].firstName + "</td><td>" + utilisateurs[i].lastName + "</td></tr>";
+					}
+					$("#tbody").html(str);
+				})
+			.fail(function() {
+			})
+			.always(function() {
+			});
+			
+			
+		</script>
+	</body>
+	
+	
+
+</html>

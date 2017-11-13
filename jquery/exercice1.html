@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+			<meta charset="utf-8" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			.invisible { 
+				display: none;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>JQuery </h1>
+		
+		<p id="p1">Ceci est mon p1 </p>
+		<br /><br />
+		<button id="monBouton">A cliquer</button>
+		<button id="monBoutonInvisible">Invisible</button>
+		<script type="text/javascript">
+			$("#monBouton").click ( function () {
+				$("p").html("p1 cliqué");
+			});
+			
+			$("#monBoutonInvisible").click ( function () {
+				// Si p est invisible, le rendre visible 
+				if ( $("p").hasClass("invisible") )
+				{
+					$("p").removeClass("invisible");
+					$("#monBoutonInvisible").html("Invisible");
+				}
+				// Sinon si p est visible, le rendre invisible 
+				else {
+					$("p").addClass("invisible");
+					$("#monBoutonInvisible").html("Visible");
+				}
+			});
+			
+			
+		</script>
+	</body>
+	
+	
+
+</html>
