@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+			<meta charset="utf-8" />
+		<script type="text/javascript"></script>
+		<style>
+			#panel-gauche {
+				float: left;
+				width: 400px;
+				background-color: cyan;
+			}
+			#panel-droite {
+				float: right;
+				width: 600px;
+				background-color: grey;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>JS Web Storage Pratique</h1>
+		
+		<div id="panel-gauche">
+			<label for="nom">Nom</label>
+			<input type="text" name="nom" id="nom"/> <br />
+			<label for="prenom">Prénom</label>
+			<input type="text" name="prenom" id="prenom"/>
+			<button id="clic">Ajouter</button>
+		</div>
+		
+		<div id="panel-droite">
+			<table>
+				<thead>
+					<tr>
+						<th>Nom</th>
+						<th>Prenom</th>
+					</tr>
+				</thead>
+				<tbody id="bodytab">
+					<tr><td colspan="2">Pas de données</td></tr>
+				</tbody>
+		</div>
+		
+		<script type="text/javascript" src="js/exercice8.js"></script>
+		
+	</body>
+	
+	
+
+</html>

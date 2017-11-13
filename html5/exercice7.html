@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+			<meta charset="utf-8" />
+		<script type="text/javascript">
+			function testLocalStorage()
+			{
+				if ( typeof (localStorage) != null ) 
+				{
+					// OK, localStorage supporté
+					// Affiche moi la valeur dans localStorage qui a pour CLE "utilisateurCourant" 
+					console.log(localStorage["utilisateurCourant"]);
+					
+					// Redéfinition de la valeur 
+					localStorage["utilisateurCourant"] = "jerome";
+					
+					// Réaffichage 
+					console.log(localStorage["utilisateurCourant"]);
+					
+					// Suppression de la valeur 
+					delete localStorage["utilisateurCourant"];
+				}
+				else 
+				{
+					console.log("localStorage non supporté");
+				}
+			}
+			
+			/**
+			* Met à jour le span avec le compteur
+			* @param Nombre de visites 
+			*/
+			function majCompteurNbVisite(nbVisite) {
+				var compteur = document.getElementById("x");
+				compteur.innerHTML = nbVisite;
+			}
+			
+			/**
+			* Calcule et met à jour le compteur de nb de visites 
+			* en fonction de ce qu'il y a dans le localStorage (ou pas)
+			*/
+			function majNbVisites()
+			{
+				if ( typeof (localStorage) != null ) 
+				{
+					var nbVisite = 0;
+					if ( localStorage["nbVisites"] != null ) 
+					{
+						nbVisite = localStorage["nbVisites"];
+					}
+
+					localStorage["nbVisites"] = ++nbVisite;
+					majCompteurNbVisite(nbVisite);
+				}
+			}
+			
+			window.onload = function () {
+				majNbVisites();
+			} ;
+			
+		</script>
+
+	</head>
+	
+	<body>
+		<h1>JS Web Storage </h1>
+		
+		<p>C'est la <span id="x">X</span>ième fois que vous visitez cette page</p>
+		
+	</body>
+	
+	
+
+</html>
