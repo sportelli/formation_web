@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+			<meta charset="utf-8" />
+
+	</head>
+	
+	<body>
+		<h1>JS Canvas Gradient</h1>
+		
+		<canvas id="canvas" width="1000" height="1000"></canvas>
+		
+		<script type="text/javascript">
+			// On récupere notre élément Canvas
+			var canvas = document.getElementById("canvas"); 
+			var context = canvas.getContext("2d"); 
+			
+			// On va créer une image en JS
+			// On créé un nouvel objet de la classe "Image" (fournie par JS)
+			var monImage = new Image();
+			
+			// On définit l'attribut SRC pour lui définir où télécharger l'image 
+			monImage.src = "images/mont-saint-michel.jpg";
+			
+			// On définit un évenement "onLoad" (que faire quand l'image a été téléchargée)
+			// => Affiche l'image dans le canvas
+			monImage.onload = function (){
+//				context.drawImage(monImage, 0 , 0 );
+				context.drawImage(monImage, 50 , 50 );
+//				context.drawImage(monImage, 100 , 100, 100 , 100 );
+
+				// permet de copier une partie de l'image vers une image de destination
+				// 1er argument : image
+				// 4 arguments : source
+				// 4 arguments : destination
+				context.drawImage(monImage, 100 , 150, 300 , 100, 800 , 200, 200 , 500);
+			};
+			
+			
+			
+		</script>
+		
+	</body>
+	
+	
+
+</html>

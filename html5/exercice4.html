@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+			<meta charset="utf-8" />
+
+	</head>
+	
+	<body>
+		<h1>JS Canvas Gradient</h1>
+		
+		<canvas id="canvas" width="1000" height="1000"></canvas>
+		
+		<script type="text/javascript">
+			// On récupere notre élément Canvas
+			var canvas = document.getElementById("canvas"); 
+			var context = canvas.getContext("2d"); 
+			
+			var mygradient = context.createLinearGradient(0,0,0,255);
+			mygradient.addColorStop(0, "black");
+			mygradient.addColorStop(1, "white");
+			context.fillStyle=mygradient;
+			context.fillRect(0,0,300,255);
+			
+		</script>
+	</body>
+	
+	
+
+</html>

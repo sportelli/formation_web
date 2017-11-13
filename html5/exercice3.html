@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+			<meta charset="utf-8" />
+
+	</head>
+	
+	<body>
+		<h1>JS Canvas TP </h1>
+		
+		<canvas id="canvas" width="1000" height="1000"></canvas>
+		
+		<script type="text/javascript">
+			// On récupere notre élément Canvas
+			var canvas = document.getElementById("canvas"); 
+			var context = canvas.getContext("2d"); 
+			
+			// On commence par dessiner le cadrillage gris
+			for (var x=0.5; x < 500; x+= 10)
+			{
+				context.moveTo(x, 0);
+				context.lineTo(x, 375);
+			}
+
+			for (var y= 0.5; y < 375; y+= 10)
+			{
+				context.moveTo(0, y);
+				context.lineTo(500, y);
+			}
+			context.strokeStyle = "#eee";
+			context.stroke();
+			
+			// On ajoute x et y
+			context.font = "bold 12px sans-serif";
+			context.fillText("x", 248, 43);
+			context.fillText("y",58,165);
+			
+			// Puis on attaque les flèches
+			// Fleche X
+			context.beginPath();
+			context.moveTo(0.5, 40);
+			context.lineTo(240, 40);
+			
+			context.moveTo(260,40);
+			context.lineTo(500,40);
+			
+			context.lineTo(490,30);
+			context.moveTo(500,40);
+			context.lineTo(490,50);
+			context.strokeStyle="black";
+			context.stroke();
+			
+			// Fleche Y
+			context.beginPath();
+			context.moveTo(60, 0.5);
+			context.lineTo(60, 150);
+			
+			context.moveTo(60,180);
+			context.lineTo(60,375);
+
+			context.lineTo(50,365);
+			context.moveTo(60,375);
+			context.lineTo(70,365);
+			context.strokeStyle="black";
+			context.stroke();	
+
+			context.font = "bold 16px sans-serif";
+			context.fillText("BRAVO !", 348, 300);
+			
+		</script>
+	</body>
+	
+	
+
+</html>

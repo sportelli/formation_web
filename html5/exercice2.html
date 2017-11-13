@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+			<meta charset="utf-8" />
+
+	</head>
+	
+	<body>
+		<h1>JS Canvas </h1>
+		
+		<canvas id="canvas" width="1000" height="1000"></canvas>
+		
+		<script type="text/javascript">
+			// On récupere notre élément Canvas
+			var canvas = document.getElementById("canvas"); 
+			var context = canvas.getContext("2d"); 
+			
+			// On lui demande de me dessiner un rectangle et de le remplir
+			context.fillRect(50, 25, 150, 100); 
+
+			context.strokeStyle = "rgb(255,0,0)";
+			context.strokeRect(500, 250, 150, 100); 
+		</script>
+	</body>
+	
+	
+
+</html>
