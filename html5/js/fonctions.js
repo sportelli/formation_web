@@ -9,11 +9,28 @@ function ajoutUtilisateurDB(user)
 		utilisateurs = JSON.parse(localStorage["users"]);
 	}
 
-	// On définit un id à user qui vaut la taille (actuelle) de users
-	// +1 pour commencer à 1
-	user.id = utilisateurs.length +1 ;
 
-	utilisateurs.push(user);
+	// Ajout 	
+	if (user.id == null) {
+		// On définit un id à user qui vaut la taille (actuelle) de users
+		// +1 pour commencer à 1
+		user.id = utilisateurs.length +1 ;
+
+		utilisateurs.push(user);
+	}
+
+	// Edition
+	else 
+	{
+		for (var i = 0; i < utilisateurs.length; i++) {
+			if (utilisateurs[i].id == user.id)
+			{
+				utilisateurs[i].nom = user.nom;
+				utilisateurs[i].prenom = user.prenom;
+			}
+		}
+	}
+
 	localStorage["users"] = JSON.stringify(utilisateurs);
 }
 
@@ -30,11 +47,28 @@ function deleteUserDB(idUser)
 	}
 }
 
+function getUserDB(idUser)
+{
+	var user = null;
+	if ( localStorage["users"] != null ) 
+	{
+		var utilisateurs = JSON.parse(localStorage["users"]);
+		for (var i= 0 ; i < utilisateurs.length ; i++)
+			if (utilisateurs[i].id === idUser)
+				user = utilisateurs[i];
+	}
+	return user;
+}
+
 function ajouteUtilisateursClic()
 {
 	var user = {};
 	user.nom = document.querySelector("#nom").value;
 	user.prenom = document.querySelector("#prenom").value;
+
+	// Id existe?  
+	if ( document.querySelector("#id").value != "")
+		user.id = document.querySelector("#id").value;
 
 	ajoutUtilisateurDB(user);
 	dessineTableau();
@@ -77,7 +111,10 @@ function dessineTableau()
 */
 function editUser(idUser)
 {
-	console.log("edition utilisateur " + idUser);
+	var user = getUserDB(idUser);
+	document.querySelector("#id").value = user.id;
+	document.querySelector("#nom").value = user.nom;
+	document.querySelector("#prenom").value = user.prenom;
 }
 
 /**
