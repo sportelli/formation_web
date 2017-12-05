@@ -1,4 +1,4 @@
 export let maFonction = () => {
-//	console.log("fonction appelee");
-	return 3;
+    //	console.log("fonction appelee");
+    return 3;
 };

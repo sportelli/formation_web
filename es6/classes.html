@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script>
+            
+            class Personne {
+                constructor(nom, prenom) {
+                    this.nom = nom;
+                    this.prenom = prenom;
+                }
+
+                get nomComplet() { return this.nom.toUpperCase() + " " + this.prenom;}
+                get description() { return "Nom: " + this.nomComplet; }
+            }
+            
+            let felix = new Personne("sportelli" , "felix");
+            console.log(felix.nomComplet);
+
+            class Salarie extends Personne {
+                constructor (nom, prenom, salaire){
+                    super(nom, prenom);
+                    this.salaire = salaire;
+                }
+
+                get description() { return super.description + " - salaire: " + this.salaire; }
+            }
+            let felix2 = new Salarie("sportelli","felix", "100");
+            console.log(felix2.description);
+
+        </script>
+    </head>
+    <body>
+    </body>
+    </html>
+    

@@ -1,60 +1,60 @@
 <html>
 <head>
-<script>
-
-// Chainer des actions
-
-function chainer_action(){
-new Promise((maFonction) => {
-    console.log('Lancement');
-    maFonction();
-})
-.then(() => {
-    console.log('Fin');
-});
-}
-
-function catch_action(){
-new Promise((maFonction) => {
-    console.log('Lancement');
-    maFonction();
-})
-.then(() => {
-    throw new Error('Probleme');
+    <script>
         
-    console.log('Ici');
-})
-.catch(() => {
-    console.log('En cas de probleme');
-})
-.then(() => {
-    console.log('La');
-});
-}
-
-function catch_fin(){
-new Promise((maFonction) => {
-    console.log('Lancement');
-    maFonction();
-})
-.then(() => {
-    console.log('Ici');
-    throw new Error('Probleme');
+        // Chainer des actions
         
-})
-.then(() => {
-    console.log('La');
-})
-.catch(() => {
-    console.log('En cas d erreur');
-});
-}
-
-//chainer_action();
-//catch_action();
-catch_fin();
-
-</script>
+        function chainer_action(){
+            new Promise((maFonction) => {
+                console.log('Lancement');
+                maFonction();
+            })
+            .then(() => {
+                console.log('Fin');
+            });
+        }
+        
+        function catch_action(){
+            new Promise((maFonction) => {
+                console.log('Lancement');
+                maFonction();
+            })
+            .then(() => {
+                throw new Error('Probleme');
+                
+                console.log('Ici');
+            })
+            .catch(() => {
+                console.log('En cas de probleme');
+            })
+            .then(() => {
+                console.log('La');
+            });
+        }
+        
+        function catch_fin(){
+            new Promise((maFonction) => {
+                console.log('Lancement');
+                maFonction();
+            })
+            .then(() => {
+                console.log('Ici');
+                throw new Error('Probleme');
+                
+            })
+            .then(() => {
+                console.log('La');
+            })
+            .catch(() => {
+                console.log('En cas d erreur');
+            });
+        }
+        
+        //chainer_action();
+        //catch_action();
+        catch_fin();
+        
+    </script>
 </head>
 <body>
 </body>
