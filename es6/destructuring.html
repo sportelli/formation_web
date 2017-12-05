@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+
+function mafonction(){
+	return { val1 : 3, val2 : 2 };
+}
+
+let { val1, val2 } = mafonction();
+
+console.log(val1);
+console.log(val2);
+
+var tab = ['a', 'b', 'c'];
+
+var [val4, val5, val6] = tab;
+console.log(val4);
+console.log(val5); 
+console.log(val6); 
+
+let val7, val8;
+[val7=5, val8=7] = [1];
+console.log(val7); // 1
+console.log(val8); // 7
+
+</script>
+</head>
+<body>
+</body>
+</html>
