@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script>
+            let augmentationAcceptee = true;
+
+            const suisjeAugmente = new Promise (
+                (resolve , reject) => {
+                    if (augmentationAcceptee){
+                        const augmentation = 100;
+                        resolve(augmentation);
+                    }
+                    else {
+                        reject( new Error("Pas atteint objectif"));
+                    }
+                }
+            )
+
+            const acheterIphoneX = function (augmentation)  {
+                    const message = "j'ai depense mon salaire dans un iPhone X !";
+                    return Promise.resolve(message);
+                };
+
+            const demanderAugmentation = function() {
+                suisjeAugmente
+                    .then(acheterIphoneX)
+                    .then(message => console.log(message))
+                    .catch( error => console.log(error.message));
+            }
+
+            demanderAugmentation();
+        </script>
+    </head>
+    <body>
+
+    </body>
+
+</html>
