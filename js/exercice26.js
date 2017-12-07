@@ -1,4 +1,5 @@
 // Objet felix 
+// attribut prenom
 // attribut tab enfants 
 // 2 methodes : 
 // nouvelEnfant( nomEnfant ) 
