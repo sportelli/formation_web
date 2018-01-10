@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <style>
+            #cpErrorMessage{ width: 200px;}
+            .alert {  padding: 0.3rem 1rem !important;}
+        </style>
+    </head>
+    <body>
+        
+        <form onsubmit="return false;">
+            <div id="page1">
+                <!-- Sexe -->
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2">Sexe</label>
+                    <div class="col-sm-10">
+                        <input type="radio" name="sexe" 
+                            id="femme" value="femme" checked/>
+                        <label for="femme">Femme</label>
+                        <input type="radio" name="sexe" 
+                        id="homme" value="homme"/>
+                        <label for="homme">Homme</label>
+                    </div>
+                </div>
+
+                <!-- Nom -->
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2">Nom</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="name" id="name" placeholder="Nom"/>
+                    </div>
+                </div>
+
+                <!-- Nom jeune fille-->
+                <div class="form-group row">
+                    <label for="childname" class="col-sm-2">Nom jeune fille</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="childname" id="childname" placeholder="Nom jeune fille" />
+                    </div>
+                </div>
+                <!-- Prénom -->
+                <div class="form-group row">
+                    <label for="firstname" class="col-sm-2">Prénom</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="firstname" id="firstname" placeholder="Prénom"/>
+                    </div>
+                </div>
+
+                <!-- Age -->
+                <div class="form-group row">
+                    <label for="age" class="col-sm-2">Age</label>
+                    <div class="col-sm-10">
+                        <input type="range" name="age" id="age" min=18 max=100 value=50 />
+                        <span id="ageText">50</span><span> ans</span>
+                    </div>
+                </div>
+
+                <!-- Code postal -->
+                <div class="form-group row">
+                        <label for="cp" class="col-sm-2">Code postal</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="cp" id="cp" placeholder="06000"/>
+                            <span id="cpErrorMessage"></span>
+                        </div>
+                </div>
+
+                <!-- Ville -->
+                <div class="form-group row">
+                        <label for="Ville" class="col-sm-2">Ville</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="Ville" id="ville" placeholder="Nice"/>
+                        </div>
+                </div>
+        
+                <button class="btn btn-primary mb-2" id="page1Button">Next</button>
+            </div>
+
+            <div id="page2" class="invisible">
+                <!-- Intérêts -->
+                <div class="form-group row">
+                        <label for="interets" class="col-sm-2">Intérêts</label>
+                        <div class="col-sm-10">
+                            <select id="interets" name="interets" multiple>
+                                <option value="assurance">Assurance</option>
+                                <option value="casse">Complément casse</option>
+                            </select>
+                        </div>
+                </div>
+
+                <!-- Nb bateaux -->
+                <div class="form-group row">
+                        <label for="bateaux" class="col-sm-2">NB bateaux</label>
+                        <div class="col-sm-10">
+                            <select id="bateaux" name="bateaux" >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">Plus</option>
+                            </select>
+                        </div>
+                </div>
+                
+                <div id="taillebateaux">
+
+                </div>
+                
+                <button class="btn btn-primary mb-2" id="page2Button">Next</button>
+                
+            </div>
+
+            <div id="page3" class="invisible">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dossier n°</th>
+                            <th>Nom (nom jeune fille)</th>
+                            <th>Prénom</th>
+                            <th>Age</th>
+                            <th>Sexe</th>
+                            <th>Taille bateau</th>
+                            <th>Assurance</th>
+                            <th>Casse</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </form>
+
+        <script 
+            type="text/javascript" 
+            src="js/exercice3.js">
+        </script>
+    </body>
+</html>
