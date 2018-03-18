@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
     <head>
@@ -145,4 +146,52 @@
             src="js/exercice3.js">
         </script>
     </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="module_jquery.js"></script>
+</head>
+<body>
+    <p>bonjour</p>
+    <script type="text/javascript">
+        console.log($.fn); // Prototype de JQuery
+
+        // Création de notre plugin
+        $.fn.extend({
+            users: ["a","b","c"],
+            greenify: function() {
+                this.css("color", "green");
+            },
+            populate : function() {
+                this.users.forEach(element => {
+                    this.text(this.text() + element);
+                });
+            },
+            clean : function() {
+                this.text("");
+            },
+            upperText : function(text) {
+                this.text(text.toUpperCase());
+            }
+        });
+
+        $("p").greenify();
+        $("p").clean();
+        $("p").populate();
+        setTimeout(() => {
+            $("p").upperText("ciao");
+        }, 1000);
+
+        setTimeout(() => {
+            $("p").lowerMoi();
+        }, 2000);
+    </script>
+</body>
+>>>>>>> ajout d'un exercice de création de plugin JQuery
 </html>
